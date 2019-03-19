@@ -5,9 +5,9 @@ This application is for personal income and expenses.
 
 1) insatll json server
 
-2) put project in public folder
+2) put project in "public" folder
 
-3) change const HOST in main.js
+3) change const HOST in index.js
 
 4) run server "json-server"
 
