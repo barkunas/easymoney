@@ -1,10 +1,11 @@
 class Main{
     constructor(){
+        
 
     }
     tryLogin(){
-        var name = $("#userName").val();
-        var pass = $("#password").val();
+        var name = $("#name1").val();
+        var pass = $("#password1").val();
         user.setCredentials(name,pass);
     }
     exit(){

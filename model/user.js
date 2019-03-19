@@ -12,7 +12,7 @@ class User{
     deleteCred(){
         delete localStorage.credentials;
         delete this.credentials;
-        loginPopup.showLoginPopUp();
+        loginPopup_new.showLoginPopUp();
     }
 
 }

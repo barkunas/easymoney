@@ -15,12 +15,12 @@ class Loginer{
             //data: data,
             success: function (){
                 ansver = true;
-                loginPopup.hideLoginPopup();
+                /*loginPopup.hideLoginPopup()*/; loginPopup_new.hideLoginPopup()
             },
             //dataType: dataType
             error: function(){
                 ansver = false
-                loginPopup.showLoginPopUp();
+                /*loginPopup.showLoginPopUp()*/; loginPopup_new.showLoginPopUp()
             }
           });
           return ansver;
