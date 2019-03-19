@@ -1,0 +1,91 @@
+.rectBtnPlus{
+    width:50px;
+    height:50px;
+    background-color: rgba(0,0,0,0.5);
+}
+.rectBtnPlus:hover{
+    background-color: rgb(173, 58, 58);
+}
+.formMain {
+    margin: 0 auto;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    background: RGBA(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+.textBox{
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0,0,0,.3) 2px solid;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.formSubmitBtn{
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0,0,0,.3) 0px solid;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #90c843;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    transition: background .4s;
+    cursor: pointer;
+    text-align: center;
+}
+.formSubmitBtn:hover{
+    background: #80b438;
+}
+.headerBox{
+    background: orange;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    color: #FFF;
+    font-size: 16pt;
+
+
+}
+#loginPopup{
+    /*visibility: hidden;*/
+}
+#logTransaction{
+    max-width: 600px;
+    margin-top: 20px;
+    margin: 20 auto;
+}
+#logTransaction div{
+    margin: 5px auto;
+    /* max-width: 400px; */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    /* background: RGBA(255,255,255,1); */
+    /* -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45); */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .45);
+}
+#logTransaction span{
+    margin-left: 5px;
+}
+.closeBtn{
+    width: 17px;
+    height: 17px;
+    content: "X";
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .45);
+    display: inline-block;
+    margin-right: 0%;
+}
