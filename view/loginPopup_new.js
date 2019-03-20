@@ -5,13 +5,15 @@ class LoginPopup_new{
             closeOnEscape: false,
             autoOpen: false,
             modal: true,
-            height: 400,
-            width: 300,
-            buttons: {
-                "Войти": function (){main.tryLogin()}
-                //"Регистрация": function (){loginer.addUser($(name1).val(),$(password1).val())}
+            height: 500,
+            width: 450,
+            open: function(){
+                $('#accordion').accordion(
+                    {heightStyle: "fill", collapsible: true}).show();
             }
-        })
+        });
+        $("#enterBtn").click( function (){main.tryLogin()});
+        $("#registrBtn").click(function (){loginer.addUser($(name2).val(),$(password2).val())});
     }
     showLoginPopUp(){
         var tips = $(".validateTips");

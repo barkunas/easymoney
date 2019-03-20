@@ -55,21 +55,35 @@
                 </div>
             </div>
         </div>
-        ------------------
-        <div id="dialog-form" title="Вход">
+        <div id="dialog-form" title="Family Wallet">
+            <div id='accordion'>
+                <h3>Вход</h3>
+                    <form>
+                        <fieldset>
+                        <label for="name1">Username</label>
+                        <input type="text" name="name1" id="name1" value="" class="text ui-widget-content ui-corner-all">
+                        <label for="password">Password</label>
+                        <input type="password" name="password1" id="password1" value="" class="text ui-widget-content ui-corner-all">
+                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                        </fieldset>
+                        <button id="enterBtn" type="button" class="ui-button ui-corner-all ui-widget">Войти</button>  
+                    </form>  
+                <h3>Регистрация</h3>
+                    <form>
+                        <fieldset>
+                        <label for="name2">Username</label>
+                        <input type="text" name="name2" id="name2" value="" class="text ui-widget-content ui-corner-all">
+                        <label for="password">Password</label>
+                        <input type="password" name="password2" id="password2" value="" class="text ui-widget-content ui-corner-all">
+                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                        </fieldset>
+                        <button id="registrBtn" type="button" class="ui-button ui-corner-all ui-widget">Зарегистрироваться</button>  
+                    </form> 
+            </div>
             <p class="validateTips">Войдите или зарегистрируйтесь</p>
-            <form>
-              <fieldset>
-                <label for="name1">Username</label>
-                <input type="text" name="name1" id="name1" value="" class="text ui-widget-content ui-corner-all">
-                <label for="password">Password</label>
-                <input type="password" name="password1" id="password1" value="" class="text ui-widget-content ui-corner-all">
-           
-                <!-- Allow form submission with keyboard without duplicating the dialog button -->
-                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-              </fieldset>
-            </form>
         </div>
+        ------------------
+        
         ------------------
         <script src="./view/loginPopup_new.js"></script>
         <script src="./index.js"></script>
