@@ -6,14 +6,16 @@ class LoginPopup_new{
             autoOpen: false,
             modal: true,
             height: 400,
-            width: 350,
+            width: 300,
             buttons: {
-                "Войти": function (){main.tryLogin()},
-                "Регистрация": function (){loginer.addUser($(name1).val(),$(password1).val())}
+                "Войти": function (){main.tryLogin()}
+                //"Регистрация": function (){loginer.addUser($(name1).val(),$(password1).val())}
             }
         })
     }
     showLoginPopUp(){
+        var tips = $(".validateTips");
+        updateTips("Войдите или зарегистрируйтесь",tips)
         //$("#loginPopup").show();
         this.$loginPopUpDialog.dialog("open")
     };
