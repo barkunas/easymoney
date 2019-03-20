@@ -12,9 +12,11 @@ var main = new Main();
 var loginPopup = new LoginPopup();
 var tranBlock = new TransactionsBlock()
 var loginPopup_new = new LoginPopup_new();
-user.credentials = localStorage.credentials
+user.credentials = localStorage.credentials;
 loginer.checklogin();
+
 try{
+    if(user.userName){$("#headerUserName").text("Logined as "+user.userName);}
     tranBlock.cookHistory();
 }
 catch(e) {console.log(e +" кукинг истории не доступен когда пользователь не залогинен")};

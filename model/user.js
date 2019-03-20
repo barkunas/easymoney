@@ -4,6 +4,7 @@ class User{
     }
     setCredentials(name,pass){
         this.credentials = solt(name,pass);
+        this.userName = name
         loginer.checklogin();
     };
     getCredentials(){

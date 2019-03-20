@@ -14,7 +14,14 @@ class Main{
             var name = $("#name1").val();
             var pass = $("#password1").val();
             var setCred = user.setCredentials(name,pass);
-            if(!setCred){updateTips("Неправильный пользователь или пароль",tips)}
+            $("#headerUserName").text("Logined as "+user.userName);
+            if(!setCred){
+                updateTips("Неправильный пользователь или пароль",tips);
+                return false;
+            };
+            //console.log(name)
+            
+
         } else return false;
         
     }
