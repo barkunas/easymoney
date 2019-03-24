@@ -35,11 +35,42 @@
             <div id="categoriesBlock" class="formMain">
                 <div style="background: green" id="draggableCat">Тест блок</div>
             </div>
+            <div id="formsBlock" class="formMain">
+                <ul>
+                    <li ><a href="#mainForm">Расходы</a></li>
+                    <li><a href="#subForm">Доходы</a></li>
+                </ul>
+                <form id="mainForm">
+                        <span>Расходы</span>
+                        <input id="goalWallet" class="textBox" placeholder="какой кошелек">
+                        <input id="productName" class="textBox" placeholder="Что">
+                        <input id="productCost"class="textBox" placeholder="Сколько денег">
+                        <input id="productTag"class="textBox" placeholder="Категория">
+                        <input class="textBox" placeholder="что-то другое">
+                        <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
+                </form>
+                <form id="subForm">
+                        <span>Доходы</span>
+                        <input id="goalWallet" class="textBox" placeholder="какой кошелек">
+                        <input id="productName" class="textBox" placeholder="Что">
+                        <input id="productCost"class="textBox" placeholder="Сколько денег">
+                        <input id="productTag"class="textBox" placeholder="Категория">
+                        <input class="textBox" placeholder="что-то другое">
+                        <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
+                </form>
+            </div>
+
+
+
+
+
+
             <form id="mainForm" class="formMain">
                 <span>Расходы</span>
-                <input id="productName" class="textBox" placeholder="что купили">
-                <input id="productCost"class="textBox" placeholder="за сколько">
-                <input id="productTag"class="textBox" placeholder="что-то другое">
+                <input id="goalWallet" class="textBox" placeholder="какой кошелек">
+                <input id="productName" class="textBox" placeholder="Что">
+                <input id="productCost"class="textBox" placeholder="Сколько денег">
+                <input id="productTag"class="textBox" placeholder="Категория">
                 <input class="textBox" placeholder="что-то другое">
                 <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
             </form>

@@ -27,3 +27,4 @@ function solt(name,pass){
     return hash;
 };
 
+$("#formsBlock").tabs()
