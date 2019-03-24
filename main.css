@@ -44,6 +44,9 @@ div#users-contain table td, div#users-contain table th {
 .rectBtnPlus:hover{
     background-color: rgb(173, 58, 58);
 }
+.draggableCat{
+    background: #80b438;
+}
 .formMain {
     margin: 20px;
     margin-right: 20px;

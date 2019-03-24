@@ -1,6 +1,6 @@
 class Transactions{
     constructor(){
-        var balance
+        var balance;
     }
     calculateBalanse(){
         var transArr = this.obj;
@@ -20,5 +20,6 @@ class Transactions{
         console.log("balance = "+this.balance)
         main.updateBalance(this.balance)
     }
+    
 
 }

@@ -50,7 +50,9 @@ class Transactioner{
             data.send();
             var obj =  JSON.parse(data.response);
             transactions.obj = obj;
-            transactions.calculateBalanse()
+            transactions.calculateBalanse();
+            categeries.categoryMaster();
+            
             return obj
         } else return false
     };
