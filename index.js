@@ -12,6 +12,7 @@ var main = new Main();
 var loginPopup = new LoginPopup();
 var tranBlock = new TransactionsBlock()
 var loginPopup_new = new LoginPopup_new();
+var categeries = new Categories();
 user.credentials = localStorage.credentials;
 loginer.checklogin();
 

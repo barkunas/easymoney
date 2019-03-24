@@ -2,6 +2,8 @@
 <html>
     <head>
         <link href="jquery-ui.css" rel="stylesheet">
+        <link href="./jquery-ui.theme.css" rel="stylesheet">
+        <link href="./jquery-ui.structure.css" rel="stylesheet">
         <link rel="stylesheet" href="./main.css">
         <link rel="stylesheet" href="./popuplogin.css">
         
@@ -14,6 +16,7 @@
         <script src="./view/main.js"></script>
         <script src="./view/loginPopup.js"></script>
         <script src="./view/transactions.js"></script>
+        <script src="./view/categories.js"></script>
         
 
     </head>
@@ -25,8 +28,13 @@
             <span style="font-family: 'Open Sans', sans-serif; font-size: 30px;">easymoney</span>
             <span style="float: right; padding: 5px;"><img src="./logOut.png" style="width: 40px;" onclick="main.exit()"></span>
         </div>
-        <div style="margin-top: 70px">
-                <span id="headerUserName" style="float: left;font-family: 'Open Sans', sans-serif; font-size: 30px;"></span>
+        <div style="margin-top: 70px; width: 100%">
+            <span id="headerUserName" style="float: left;font-family: 'Open Sans', sans-serif; font-size: 30px;"></span>
+        </div>
+        <div id="topBlock" style="flex-wrap: wrap; margin-top: 70px; display: flex; max-width: 700px; justify-content: space-around;">
+            <div class="formMain">Категории
+                <div style="background: green" id="draggableCat">Тест блок</div>
+            </div>
             <form class="formMain">
                 <span>Расходы</span>
                 <input id="productName" class="textBox" placeholder="что купили">
@@ -35,7 +43,7 @@
                 <input class="textBox" placeholder="что-то другое">
                 <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
             </form>
-       </div>
+        </div>
         <div id="logTransaction">
             
         </div>
