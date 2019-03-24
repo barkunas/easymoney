@@ -45,7 +45,7 @@ class Categories{
             containment: ".topBlock",
             scroll: false,
             return: true
-        })
+        }).button();
     };
 
 }
