@@ -41,10 +41,11 @@ class Categories{
         for(let e in catArr){
             $catBlock.append($("<div class='draggableCat'>").text(e))
         };
-        $( ".draggableCat" ).draggable({ 
+        $(".draggableCat").draggable({ 
             containment: ".topBlock",
             scroll: false,
             return: true
-        });
-    }
+        })
+    };
+
 }
