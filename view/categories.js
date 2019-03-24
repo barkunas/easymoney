@@ -5,10 +5,10 @@ class Categories{
             containment: ".topBlock",
             scroll: false 
         });
-        $( "#productTag" ).droppable({
+        $( "#mainForm" ).droppable({
             drop: function( event, ui ) {
-                console.log(ui)
-              $( this )
+                console.log(this)
+              $( this.productTag )
                 .addClass( "ui-state-highlight" )
                 //.find( "p" )
                   .val( ui.draggable[0].textContent );
