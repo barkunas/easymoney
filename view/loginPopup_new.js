@@ -26,8 +26,6 @@ class LoginPopup_new{
         this.$loginPopUpDialog.dialog("close")
     };
     showLoginPopUp_new(){
-        $("#jquryUiDialog").dialog({
-
-        })
+        $("#jquryUiDialog").dialog({})
     }
 }

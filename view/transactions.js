@@ -17,7 +17,6 @@ class TransactionsBlock{
         transactionBody.innerHTML = null;
         for(var i=ids.length-1;i!=0;i--){
             //console.log(ids[i])
-            
             let tempData = transactions[ids[i]];
             if(tempData.isDeleted){
                 continue;
@@ -47,8 +46,5 @@ class TransactionsBlock{
             dataStroke.appendChild(closeBtn);
             transactionBody.appendChild(dataStroke)
         }
-        
     }
-
-
 }

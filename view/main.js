@@ -3,6 +3,29 @@ class Main{
         
 
     }
+    checkTransFields(form){
+        var tips = $(/*тут вставить куда выводить еррор*/);
+        var allFields = $( [] 
+            ).add(goalWallet).add(goalWallet2
+                ).add(productName).add(productName2
+                    ).add(productCost).add(productCost2
+                        ).add(productTag).add(productTag2);
+        allFields.removeClass( "ui-state-error" );
+        var valid = true;
+        if(form==1){
+            valid  = valid && checkRegexp($(goalWallet),/^([0-9a-zA-Zа-яА-Я_])+$/i,"Нельзя использовать пробелы и тире",tips);
+            valid  = valid && checkRegexp($(productName),/^([0-9a-zA-Zа-яА-Я-_\s])+$/i,"Имя пользователя должен содержать латинские символы",tips);
+            valid  = valid && checkRegexp($(productCost),/^([0-9])+$/i,"только числа",tips);
+            valid  = valid && checkRegexp($(productTag),/^([0-9a-zA-Zа-яА-Я_])+$/i,"Имя пользователя должен содержать латинские символы",tips);
+        }
+        if(form==2){
+            valid  = valid && checkRegexp($(goalWallet2),/^([0-9a-zA-Zа-яА-Я_])+$/i,"Имя пользователя должен содержать латинские символы",tips);
+            valid  = valid && checkRegexp($(productName2),/^([0-9a-zA-Zа-яА-Я-_\s])+$/i,"Имя пользователя должен содержать латинские символы",tips);
+            valid  = valid && checkRegexp($(productCost2),/^([0-9])+$/i,"только числа",tips);
+            valid  = valid && checkRegexp($(productTag2),/^([0-9a-zA-Zа-яА-Я_])+$/i,"Имя пользователя должен содержать латинские символы",tips);
+        }
+        if(!valid){return false};
+    }
     tryLogin(){
         var tips = $(".validateTips");
         var allFields = $( [] ).add(name1).add(password1);

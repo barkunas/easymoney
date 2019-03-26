@@ -31,10 +31,11 @@
         <div style="margin-top: 70px; width: 100%">
             <span id="headerUserName" style="float: left;font-family: 'Open Sans', sans-serif; font-size: 30px;"></span>
         </div>
-        <div id="topBlock" style="flex-wrap: wrap; margin-top: 70px; display: flex; max-width: 700px; justify-content: space-around;">
-            <div id="categoriesBlock" class="formMain">
+        <div id="topBlock" style="flex-wrap: wrap; margin-top: 70px; display: flex; justify-content: space-around;">
+            <div id="categoriesBlock" class="formMain" style="z-index: 100">
                 <div style="background: green" id="draggableCat">Тест блок</div>
             </div>
+            
             <div id="formsBlock" class="formMain">
                 <ul>
                     <li ><a href="#mainForm">Расходы</a></li>
@@ -47,33 +48,21 @@
                         <input id="productCost"class="textBox" placeholder="Сколько денег">
                         <input id="productTag"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(1);transactioner.setTransaction(false,goalWallet.value,true)">Записать</div>
                 </form>
                 <form id="subForm">
                         <span>Доходы</span>
-                        <input id="goalWallet" class="textBox" placeholder="какой кошелек">
-                        <input id="productName" class="textBox" placeholder="Что">
-                        <input id="productCost"class="textBox" placeholder="Сколько денег">
-                        <input id="productTag"class="textBox" placeholder="Категория">
+                        <input id="goalWallet2" class="textBox" placeholder="какой кошелек">
+                        <input id="productName2" class="textBox" placeholder="Что">
+                        <input id="productCost2"class="textBox" placeholder="Сколько денег">
+                        <input id="productTag2"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(2);ransactioner.setTransaction(false,goalWallet.value,false,false,productName2.value,productCost2.value,productTag2.value)">Записать</div>
                 </form>
             </div>
-
-
-
-
-
-
-            <form id="mainForm" class="formMain">
-                <span>Расходы</span>
-                <input id="goalWallet" class="textBox" placeholder="какой кошелек">
-                <input id="productName" class="textBox" placeholder="Что">
-                <input id="productCost"class="textBox" placeholder="Сколько денег">
-                <input id="productTag"class="textBox" placeholder="Категория">
-                <input class="textBox" placeholder="что-то другое">
-                <div class="formSubmitBtn" onclick="transactioner.setTransaction()">Записать</div>
-            </form>
+            <div id="walletsBlock" class="formMain">
+                    <div style="background: green" id="draggableWal"> Тут будут кошельки</div>
+                </div>
         </div>
         <div id="logTransaction">
             

@@ -9,17 +9,16 @@ class Transactions{
         for(var d in transArr){
             var data = transArr[d];
             if(!data.isDeleted){
+                console.log(data.kredit);
                 if(data.kredit){
-                    console.log(Number(data.money))
+                    console.log(data.money);
                     this.balance -= Number(data.money);
                 } else {
                     this.balance += Number(data.money);
                 }
             }
         }
-        console.log("balance = "+this.balance)
-        main.updateBalance(this.balance)
+        console.log("balance = "+this.balance);
+        main.updateBalance(this.balance);
     }
-    
-
 }
