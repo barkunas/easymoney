@@ -2,7 +2,7 @@ class Main{
     constructor(){
         $( "#mainForm" ).droppable({
             drop: function( event, ui ) {
-                console.log(ui)
+                //console.log(ui)
                 var parentElem = ui.draggable[0].parentElement.id;
                 if(parentElem=="categoriesBlock"){
                     $( this.productTag )

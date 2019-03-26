@@ -35,7 +35,7 @@ class TransactionsBlock{
             closeBtn.className = "closeBtn";
             closeBtn.innerText = "x"
             closeBtn.onclick = function(){
-                console.log(this)
+                //console.log(this)
                 var id = this.id                
                 transactioner.delTransaction(id)
             }

@@ -46,7 +46,7 @@
                         <input id="productCost"class="textBox" placeholder="Сколько денег">
                         <input id="productTag"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="main.checkTransFields(1);transactioner.setTransaction(false,goalWallet.value,true)">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(1);transactioner.setTransaction(undefined,false,goalWallet.value,true)">Записать</div>
                 </form>
                 <form id="subForm">
                         <span>Доходы</span>
@@ -55,7 +55,7 @@
                         <input id="productCost2"class="textBox" placeholder="Сколько денег">
                         <input id="productTag2"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="main.checkTransFields(2);transactioner.setTransaction(false,goalWallet.value,false,false,productName2.value,productCost2.value,productTag2.value)">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(2);transactioner.setTransaction(undefined,false,goalWallet.value,false,false,productName2.value,productCost2.value,productTag2.value)">Записать</div>
                 </form>
             </div>
             <div id="walletsBlock" class="formMain" style="z-index: 100"></div>

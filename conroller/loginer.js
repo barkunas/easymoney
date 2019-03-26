@@ -5,7 +5,7 @@ class Loginer{
     checklogin(){
         var userCredential = user.getCredentials();
         localStorage.credentials = userCredential;
-        console.log(userCredential);
+        //console.log(userCredential);
         var ansver
         $.ajax({
             type: "GET",

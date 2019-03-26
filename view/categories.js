@@ -4,11 +4,11 @@ class Categories{
     };
     categoryMaster(){
         var trans = transactions.obj;
-        console.log(trans)
+        //console.log(trans)
         this.catArr = {};
         for(let e in trans){
             let newCat = ""+(trans[e].tags);
-            console.log(newCat);
+            //console.log(newCat);
             if(newCat.length>1){
             this.catArr[newCat] = "good";
             }

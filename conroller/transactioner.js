@@ -18,14 +18,15 @@ class Transactioner{
         };
         return obj;
     };
-    setTransaction(isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags){
+    setTransaction(id,isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags){
         if(loginer.checklogin()){
             var dbName = user.getCredentials();
             var data = new XMLHttpRequest();
             data.open("PATCH",Host+"/comments/"+dbName,false);
             data.setRequestHeader('Content-type', 'application/json; charset=utf-8');
             var curtime = +new Date();
-            var obj = transactioner.cookTransaction(undefined,isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags) ;
+            var goalId = id||undefined
+            var obj = transactioner.cookTransaction(id,isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags) ;
             var json = JSON.stringify(obj);
             data.send(json);
             tranBlock.cookHistory();
@@ -49,7 +50,8 @@ class Transactioner{
         var ID = id;
         var del = true;
         if(loginer.checklogin()){
-            this.setTransaction(ID,del);
+            //transactions.obj[id].isDeleted = true;
+            this.setTransaction(id,del);
         } else return false
     }
 }
