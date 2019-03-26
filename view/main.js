@@ -1,7 +1,21 @@
 class Main{
     constructor(){
-        
-
+        $( "#mainForm" ).droppable({
+            drop: function( event, ui ) {
+                //console.log(ui)
+                var parentElem = ui.draggable[0].parentElement.id;
+                if(parentElem=="categoriesBlock"){
+                    $( this.productTag )
+                        .addClass( "ui-state-highlight" )
+                          .val( ui.draggable[0].textContent );
+                }
+                if(parentElem=="walletsBlock"){
+                    $( this.goalWallet )
+                        .addClass( "ui-state-highlight" )
+                          .val( ui.draggable[0].textContent );
+                }
+            }
+        });
     }
     checkTransFields(form){
         var tips = $(/*тут вставить куда выводить еррор*/);

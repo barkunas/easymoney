@@ -6,7 +6,7 @@
         <link href="./css/jquery-ui.structure.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/popuplogin.css">
-        
+        <link rel="stylesheet" href="./css/table.css">
         <script src="./js/jquery-3.3.1.min.js"></script>
         <script src="./js/jquery-ui.js"></script>
         <script src="./model/user.js"></script>
@@ -17,6 +17,7 @@
         <script src="./view/loginPopup.js"></script>
         <script src="./view/transactions.js"></script>
         <script src="./view/categories.js"></script>
+        <script src="./view/wallets.js"></script>
         
 
     </head>
@@ -32,10 +33,7 @@
             <span id="headerUserName" style="float: left;font-family: 'Open Sans', sans-serif; font-size: 30px;"></span>
         </div>
         <div id="topBlock" style="flex-wrap: wrap; margin-top: 70px; display: flex; justify-content: space-around;">
-            <div id="categoriesBlock" class="formMain" style="z-index: 100">
-                <div style="background: green" id="draggableCat">Тест блок</div>
-            </div>
-            
+            <div id="categoriesBlock" class="formMain" style="z-index: 100"></div>            
             <div id="formsBlock" class="formMain">
                 <ul>
                     <li ><a href="#mainForm">Расходы</a></li>
@@ -48,7 +46,7 @@
                         <input id="productCost"class="textBox" placeholder="Сколько денег">
                         <input id="productTag"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="main.checkTransFields(1);transactioner.setTransaction(false,goalWallet.value,true)">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(1);transactioner.setTransaction(undefined,false,goalWallet.value,true)">Записать</div>
                 </form>
                 <form id="subForm">
                         <span>Доходы</span>
@@ -57,12 +55,10 @@
                         <input id="productCost2"class="textBox" placeholder="Сколько денег">
                         <input id="productTag2"class="textBox" placeholder="Категория">
                         <input class="textBox" placeholder="что-то другое">
-                        <div class="formSubmitBtn" onclick="main.checkTransFields(2);ransactioner.setTransaction(false,goalWallet.value,false,false,productName2.value,productCost2.value,productTag2.value)">Записать</div>
+                        <div class="formSubmitBtn" onclick="main.checkTransFields(2);transactioner.setTransaction(undefined,false,goalWallet.value,false,false,productName2.value,productCost2.value,productTag2.value)">Записать</div>
                 </form>
             </div>
-            <div id="walletsBlock" class="formMain">
-                    <div style="background: green" id="draggableWal"> Тут будут кошельки</div>
-                </div>
+            <div id="walletsBlock" class="formMain" style="z-index: 100"></div>
         </div>
         <div id="logTransaction">
             
