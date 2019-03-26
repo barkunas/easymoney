@@ -1,18 +1,6 @@
 class Categories{
     constructor(){
-        $( "#draggableCat" ).draggable({ 
-            containment: ".topBlock",
-            scroll: false 
-        });
-        $( "#mainForm" ).droppable({
-            drop: function( event, ui ) {
-                console.log(this)
-              $( this.productTag )
-                .addClass( "ui-state-highlight" )
-                //.find( "p" )
-                  .val( ui.draggable[0].textContent );
-            }
-          });
+        
     };
     categoryMaster(){
         var trans = transactions.obj;

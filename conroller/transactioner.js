@@ -41,6 +41,7 @@ class Transactioner{
             transactions.obj = obj;
             transactions.calculateBalanse();
             categeries.categoryMaster();
+            wallets.walletsMaster();
             return obj
         } else return false
     };
