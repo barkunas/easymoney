@@ -1,6 +1,6 @@
 //const dbName = "test"
-const Host = "http://192.168.100.5:8081";
-//const Host = "http://localhost:3000"
+//const Host = "http://192.168.100.5:8081";
+const Host = "http://localhost:3000"
 //const Host = "http://10.208.4.154:8081"
 //getTransactionStory()
 

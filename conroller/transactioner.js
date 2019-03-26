@@ -6,7 +6,7 @@ class Transactioner{
         var curtime = id||+new Date();
         var obj = {
             [curtime] :{
-                kredit: true||Kredit,
+                kredit: Kredit,
                 transaction: isMinus,
                 from: From,
                 name: Name||$("#productName").val(),
@@ -25,7 +25,7 @@ class Transactioner{
             data.open("PATCH",Host+"/comments/"+dbName,false);
             data.setRequestHeader('Content-type', 'application/json; charset=utf-8');
             var curtime = +new Date();
-            var obj = transactioner.cookTransaction(isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags) ;
+            var obj = transactioner.cookTransaction(undefined,isDeleted,From,Kredit,isMinus,Name,amount,Tags,SubTags) ;
             var json = JSON.stringify(obj);
             data.send(json);
             tranBlock.cookHistory();
