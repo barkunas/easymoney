@@ -4,7 +4,7 @@ class User{
     }
     setCredentials(name,pass){
         this.credentials = solt(name,pass);
-        this.userName = name
+        this.userName = name;
         loginer.checklogin();
     };
     getCredentials(){
@@ -15,5 +15,4 @@ class User{
         delete this.credentials;
         loginPopup_new.showLoginPopUp();
     }
-
 }

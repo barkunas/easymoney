@@ -2,7 +2,6 @@ class Loginer{
     constructor(){
 
     }
-
     checklogin(){
         var userCredential = user.getCredentials();
         localStorage.credentials = userCredential;
@@ -15,18 +14,17 @@ class Loginer{
             //data: data,
             success: function (){
                 ansver = true;
-                /*loginPopup.hideLoginPopup()*/; loginPopup_new.hideLoginPopup()
+                /*loginPopup.hideLoginPopup()*/ loginPopup_new.hideLoginPopup();
             },
             //dataType: dataType
             error: function(){
-                ansver = false
-                /*loginPopup.showLoginPopUp()*/; loginPopup_new.showLoginPopUp()
+                ansver = false;
+                /*loginPopup.showLoginPopUp()*/ loginPopup_new.showLoginPopUp();
             }
           });
-          return ansver;
+          return ansver
           //console.log(ansver)
-    };
-
+    }
     addUser(name,pass){
         var tips = $(".validateTips");
         var allFields = $( [] ).add(name2).add(password2);
@@ -34,10 +32,10 @@ class Loginer{
         var valid = true;
         valid  = valid && checkRegexp($(name2),/^[a-z]([0-9a-z_\s])+$/i,"Имя пользователя должен содержать латинские символы",tips);
         valid  = valid && checkRegexp($(password2),/^([0-9a-zA-Z])+$/,"Пароль должен содержать только латинские символы и цифры",tips);
-        if(!valid){return false}
-        user.setCredentials(name,pass)
+        if(!valid){return false};
+        user.setCredentials(name,pass);
         var userCredential = user.getCredentials();
-        var ansver
+        var ansver;
         $.ajax({
             type: "POST",
             url: Host+"/posts/", 
@@ -62,6 +60,6 @@ class Loginer{
             error: function () {ansver = false}
         });
         if(ansver){}
-        return ansver;
+        return ansver
     };
 }
