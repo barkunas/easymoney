@@ -7,10 +7,10 @@ class Wallets{
         //console.log(trans)
         this.wallArr = {};
         for(let e in trans){
-            let newWall = ""+(trans[e].from);
-            //console.log(newCat);
-            if(newWall.length>1){
-            this.wallArr[newWall] = "good";
+            let newWall = (trans[e].from);
+            //console.log(newWall);
+            if(newWall){
+                this.wallArr[newWall] = "good";
             }
         }
         this.updateWallBlock();
@@ -21,7 +21,9 @@ class Wallets{
         var $wallBlock  = $("#walletsBlock");
         $wallBlock.text("");
         for(let e in wallArr){
-            $wallBlock.append($("<div class='draggableWall'>").text(e))
+            if(e!=undefined){
+                $wallBlock.append($("<div class='draggableWall'>").text(e))
+            }
         };
         $(".draggableWall").draggable({ 
             containment: ".topBlock",
